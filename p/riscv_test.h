@@ -249,7 +249,7 @@ reset_vector:                                                           \
         li TESTNUM, 1;                                                  \
         li a7, 93;                                                      \
         li a0, 0;                                                       \
-        ecall
+        .word 0x0000006b
 
 #define TESTNUM gp
 #define RVTEST_FAIL                                                     \
@@ -259,7 +259,7 @@ reset_vector:                                                           \
         or TESTNUM, TESTNUM, 1;                                         \
         li a7, 93;                                                      \
         addi a0, TESTNUM, 0;                                            \
-        ecall
+        .word 0x0000006b
 
 //-----------------------------------------------------------------------
 // Data Section Macro
