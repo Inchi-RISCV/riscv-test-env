@@ -204,7 +204,7 @@ handle_exception:                                                       \
 reset_vector:                                                           \
         INIT_XREG;                                                      \
         RISCV_MULTICORE_DISABLE;                                        \
-        INIT_RNMI;                                                      \
+        /* INIT_RNMI; */                                                     \
         INIT_SATP;                                                      \
         INIT_PMP;                                                       \
         DELEGATE_NO_TRAPS;                                              \
