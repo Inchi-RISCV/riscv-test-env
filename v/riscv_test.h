@@ -43,7 +43,7 @@ userstart:                                                              \
 //-----------------------------------------------------------------------
 
 #undef RVTEST_PASS
-#define RVTEST_PASS li a0, 1; .word 0x0000006b
+#define RVTEST_PASS li a0, 0; .word 0x0000006b
 
 #undef RVTEST_FAIL
 #define RVTEST_FAIL sll a0, TESTNUM, 1; 1:beqz a0, 1b; or a0, a0, 1; .word 0x0000006b;
